@@ -1,4 +1,4 @@
-[ 
+let movies = [ 
 		{ 
  			title: 'Harry Potter and the Deathly Hallows: Part 2', 
  			director: 'David Yates', 
@@ -54,5 +54,20 @@
  			director: 'Hayao Miyazaki', 
  			release: 2001 
  		} 
- 	]	 
+	 ];
+
+let newArr = [];
+movies.map(movie => {
+	newArr.push({
+		title: movie.title,
+		release: movie.release
+	})
+});
+
+let filteredArray = movies.filter(movie => movie.release > 2011);
+
+console.log("Mapped array")
+console.log(newArr);
+console.log("Filtered array");
+console.log(filteredArray);
  
